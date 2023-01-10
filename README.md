@@ -11,7 +11,8 @@ Please note that Fugu15 does not support tweaks (no tweak injection library).
 - iPhone 12 Pro Max: iOS 15.4.1
 - iPhone 13: iOS 15.1 (offline edition - see bugs below [WiFi bug])
 
-Other devices are probably supported as well.  
+Other devices are probably supported as well. 
+Some specific device & iOS combinations do not currently work. 
 Non-arm64e devices are not supported.
 
 # Building
