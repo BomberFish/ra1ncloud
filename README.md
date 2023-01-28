@@ -94,4 +94,4 @@ The following open-source software is used by Fugu15:
 - [ZIPFoundation](https://github.com/weichsel/ZIPFoundation): Swift library for working with ZIP archives. Used in FuguInstall to install the Fugu15 App. License: [MIT](https://github.com/weichsel/ZIPFoundation/blob/development/LICENSE)
 
 # License
-GPLv3. See the `LICENSE` file.
+BSD 3-Clause License. See the `LICENSE` file.
