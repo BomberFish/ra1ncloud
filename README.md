@@ -11,7 +11,8 @@ Please note that Fugu15 does not support tweaks (no tweak injection library).
 - iPhone 12 Pro Max: iOS 15.4.1
 - iPhone 13: iOS 15.1 (offline edition - see bugs below [WiFi bug])
 
-Other devices are probably supported as well.  
+Other devices are probably supported as well. 
+Some specific device & iOS combinations do not currently work. 
 Non-arm64e devices are not supported.
 
 # Building
@@ -51,12 +52,13 @@ The following commands are especially useful:
 - `r64/r32/r16/r8 <address>`: Read a 64/32/16/8 bit integer at the given kernel address. Add the `@S` suffix to slide the given address or `@P` to read from a physical address.
 - `w64/w32/w16/w8 <address> <value>`: Write the given 64/32/16/8 bit integer to the given kernel address. Also supports the suffixes described above and additionally `@PPL` to write to a PPL protected address (see `krwhelp`).
 - `kcall <address> <up to 8 arguments>`: Call the kernel function at the given address, passing up to 8 64-Bit integer arguments.
-- `tcload <path to TrustCache>`: Load the given TrustCache into the kernel
+- `tc`: Load a TrustCache
+- `tcload`: Load a TrustCache and exit
 
 # Procursus Bootstrap and Sileo
 Fugu15 also ships with the procursus bootstrap and Sileo. Run the `bootstrap` command in iDownload to install both. Afterwards, you might have to respring to force Sileo to show up on the Home Screen (`uicache -r`).
 
-Procursus is installed into the `/private/preboot/jb` directory and `/var/jb` is a symlink to it.
+Procursus is installed into the `/private/preboot/<uuid>/jb` directory and `/var/jb` is a symlink to it.
 
 # Known Issues/Bugs
 1. If oobPCI (the process exploiting the kernel) exits, the system might be left in an inconsistent state and panic at some point. This usually occurs about 5 seconds after running the `exit_full` command in iDownload.  
@@ -79,8 +81,8 @@ A: No.
 Q: Do you provide official support for Fugu15? Are any updates planned?  
 A: No.  
 
-Q: I installed/updated something through Sileo but it won't launch. How can I fix that?  
-A: Fugu15 uses TrustCache injection to bypass code signing. Therefore, if you install or update something, it's code signature must be in a TrustCache. You can load additional TrustCaches from the iDownload shell via the `tcload` command.  
+Q: I installed/updated something through dpkg/apt but it won't launch. How can I fix that?  
+A: Fugu15 uses TrustCache injection to bypass code signing. Therefore, if you install or update something, it's code signature must be in the TrustCache. You can regenerate the TrustCache from your favorite shell via the `trustcache` command.  
 
 Q: Wen eta Fugu16??????  
 A: ...  
@@ -92,4 +94,4 @@ The following open-source software is used by Fugu15:
 - [ZIPFoundation](https://github.com/weichsel/ZIPFoundation): Swift library for working with ZIP archives. Used in FuguInstall to install the Fugu15 App. License: [MIT](https://github.com/weichsel/ZIPFoundation/blob/development/LICENSE)
 
 # License
-MIT. See the `LICENSE` file.
+BSD 2-Clause License. See the `LICENSE` file.
