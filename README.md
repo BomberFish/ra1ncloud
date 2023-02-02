@@ -92,6 +92,8 @@ The following open-source software is used by Fugu15:
 - [Procursus Bootstrap](https://github.com/ProcursusTeam/Procursus): The bootstrap used by Fugu15. License: [BSD 0-Clause](https://github.com/ProcursusTeam/Procursus/blob/main/LICENSE). The tools included in the bootstrap are released under many different licenses, please see the procursus repo for more information
 - [Sileo](https://github.com/Sileo/Sileo): The package manager included in Fugu15. License: [BSD 4-Clause](https://github.com/Sileo/Sileo/blob/stable/LICENSE)
 - [ZIPFoundation](https://github.com/weichsel/ZIPFoundation): Swift library for working with ZIP archives. Used in FuguInstall to install the Fugu15 App. License: [MIT](https://github.com/weichsel/ZIPFoundation/blob/development/LICENSE)
+- [opa334 Fugu15 fork](https://github.com/opa334/Fugu15): PoC tweak injection code used in this fork of Fugu15. License: [MIT](https://github.com/opa334/Fugu15/blob/master/LICENSE)
+
 
 # License
 BSD 2-Clause License. See the `LICENSE` file.
