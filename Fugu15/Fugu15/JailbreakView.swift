@@ -146,7 +146,7 @@ struct JailbreakView: View {
                                         .font(.system(size: 32, design: .rounded))
                                     
                                     Text("Special thanks to these people:")
-                                        .offset(x: -62, y: 10)
+                                        .offset(x: -46, y: 10)
                                     
                                     VStack {
                                         
@@ -167,7 +167,7 @@ struct JailbreakView: View {
                                             .offset(x: -21, y:-33)
                                         
                                         Text("Created Fugu15")
-                                            .offset(x: -14, y:-23)
+                                            .offset(x: -15, y:-23)
                                             .font(.system(size: 14))
                                             .foregroundColor(.gray)
                                         
@@ -188,8 +188,8 @@ struct JailbreakView: View {
                                             .font(.system(size: 16))
                                             .offset(x: -33, y:-65)
                                         
-                                        Text("Made Tweak Injection Method")
-                                            .offset(x: 28, y:-55)
+                                        Text("iDownload Trust Level Commands")
+                                            .offset(x: 42, y:-55)
                                             .font(.system(size: 14))
                                             .foregroundColor(.gray)
                                         
