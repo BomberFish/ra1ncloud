@@ -266,7 +266,7 @@ struct JailbreakView: View {
                                 .offset(x: 79, y: 0)
                                 .overlay(
                                     
-                                    Text("Version 0.1")
+                                    Text("Version 0.2")
                                         .offset(x: 79)
                                         .foregroundColor(Color("txtcolor"))
                                 )
